@@ -5373,4 +5373,19 @@ PATHS = {
             )),
         ],
     ),
+    ('container', 'envs'): APIData(
+        versioned=[
+            # available since 7.4beta4
+            ('7.4', '>', VersionedAPIData(
+                primary_keys=('name',),
+                fully_understood=True,
+                fields={
+                    'comment': KeyInfo(can_disable=True, remove_value=''),
+                    'name': KeyInfo(),
+                    'key': KeyInfo(required=True),
+                    'value': KeyInfo(default='')
+                },
+            )),
+        ],
+    ),
 }
