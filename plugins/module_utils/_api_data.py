@@ -5353,15 +5353,30 @@ PATHS = {
         versioned=[
             # available since 7.4beta4
             ('7.4', '>', VersionedAPIData(
-                primary_keys=('name',),
+                primary_keys=('name','key',),
                 fully_understood=True,
                 fields={
                     'comment': KeyInfo(can_disable=True, remove_value=''),
-                    'name': KeyInfo(),
+                    'name': KeyInfo(required=True),
                     'key': KeyInfo(required=True),
                     'value': KeyInfo(default='')
                 },
             )),
         ],
     ),
+    ('container', 'mounts'): APIData(
+        versioned=[
+            # available since 7.4beta4
+            ('7.4', '>', VersionedAPIData(
+                primary_keys=('name',),
+                fully_understood=True,
+                fields={
+                    'comment': KeyInfo(can_disable=True, remove_value=''),
+                    'name': KeyInfo(),
+                    'src': KeyInfo(default=''),
+                    'dst': KeyInfo(default='')
+                },
+            )),
+        ],
+    )
 }
