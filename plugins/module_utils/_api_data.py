@@ -5356,4 +5356,21 @@ PATHS = {
             },
         ),
     ),
+    ('container', 'config'): APIData(
+        versioned=[
+            # available since 7.4beta4
+            ('7.4', '>', VersionedAPIData(
+                single_value=True,
+                fully_understood=True,
+                fields={
+                    'ram-high': KeyInfo(default=0),
+                    'registry-url': KeyInfo(default=''),
+                    'tmpdir': KeyInfo(default=''),
+                    'username': KeyInfo(default=''),
+                    'password': KeyInfo(default=''),
+                    'layer-dir': KeyInfo(default='')
+                },
+            )),
+        ],
+    ),
 }
