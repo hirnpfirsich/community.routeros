@@ -5338,12 +5338,14 @@ PATHS = {
             ('7.4', '>', VersionedAPIData(
                 single_value=True,
                 fully_understood=True,
+                versioned_fields=[
+                    ([('7.8', '>=')], 'username', KeyInfo(default='')),
+                    ([('7.8', '>=')], 'password', KeyInfo(default=''))
+                ],
                 fields={
                     'ram-high': KeyInfo(default=0),
                     'registry-url': KeyInfo(default=''),
                     'tmpdir': KeyInfo(default=''),
-                    'username': KeyInfo(default=''),
-                    'password': KeyInfo(default=''),
                     'layer-dir': KeyInfo(default='')
                 },
             )),
