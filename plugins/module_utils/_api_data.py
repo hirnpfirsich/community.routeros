@@ -5356,6 +5356,38 @@ PATHS = {
             },
         ),
     ),
+    ('container', ): APIData(
+        versioned=[
+            # available since 7.4beta4
+            ('7.4', '>', VersionedAPIData(
+                primary_keys=('name',),
+                fully_understood=True,
+                fields={
+                    'cmd': KeyInfo(),
+                    'comment': KeyInfo(can_disable=True, remove_value=''),
+                    'dns': KeyInfo(default=''),
+                    'domain-name': KeyInfo(),
+                    'entrypoint': KeyInfo(),
+                    'envlist': KeyInfo(),
+                    'file': KeyInfo(write_only=True),
+                    'hostname': KeyInfo(),
+                    'interface': KeyInfo(required=True),
+                    'logging': KeyInfo(),
+                    'mounts': KeyInfo(default=''),
+                    'remote-image': KeyInfo(write_only=True),
+                    'root-dir': KeyInfo(),
+                    'start-on-boot': KeyInfo(),
+                    'stop-signal': KeyInfo(),
+                    'user': KeyInfo(),
+                    'workdir': KeyInfo(),
+                    'name': KeyInfo(read_only=True),
+                    'tag': KeyInfo(read_only=True, automatically_computed_from='remote-image'),
+                    'os': KeyInfo(read_only=True),
+                    'arch': KeyInfo(read_only=True),
+                },
+            )),
+        ],
+    ),
     ('container', 'config'): APIData(
         versioned=[
             # available since 7.4beta4
