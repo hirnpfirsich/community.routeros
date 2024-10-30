@@ -5336,7 +5336,6 @@ PATHS = {
         versioned=[
             # available since 7.4beta4
             ('7.4', '>', VersionedAPIData(
-                primary_keys=('name',),
                 fully_understood=True,
                 fields={
                     'cmd': KeyInfo(),
