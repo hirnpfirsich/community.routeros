@@ -551,6 +551,20 @@ PATHS = {
             },
         ),
     ),
+    ('interface', 'veth'): APIData(
+        unversioned=VersionedAPIData(
+            fully_understood=True,
+            primary_keys=('name', ),
+            fields={
+                'comment': KeyInfo(can_disable=True, remove_value=''),
+                'disabled': KeyInfo(default=False),
+                'name': KeyInfo(),
+                'address': KeyInfo(default=''),
+                'gateway': KeyInfo(default=''),
+                'gateway6': KeyInfo(default=''),
+            },
+        ),
+    ),
     ('interface', 'vrrp'): APIData(
         unversioned=VersionedAPIData(
             fully_understood=True,
