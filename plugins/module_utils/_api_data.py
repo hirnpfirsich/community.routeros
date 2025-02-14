@@ -366,7 +366,7 @@ PATHS = {
                 'orig-mac-address': KeyInfo(),
                 'poe-out': KeyInfo(can_disable=True, remove_value='auto-on'),
                 'poe-priority': KeyInfo(can_disable=True, remove_value=10),
-                'poe-voltage': KeyInfo(can_disable=True),
+                'poe-voltage': KeyInfo(can_disable=True, remove_value='auto'),
                 'power-cycle-interval': KeyInfo(),
                 'power-cycle-ping-address': KeyInfo(can_disable=True),
                 'power-cycle-ping-enabled': KeyInfo(),
