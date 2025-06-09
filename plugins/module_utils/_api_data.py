@@ -374,7 +374,7 @@ PATHS = {
                 'power-cycle-ping-timeout': KeyInfo(can_disable=True),
                 'rx-flow-control': KeyInfo(default='off'),
                 'sfp-rate-select': KeyInfo(default='high'),
-                'sfp-ignore-rx-los': KeyInfo(default='no'),
+                'sfp-ignore-rx-los': KeyInfo(default=False),
                 'sfp-shutdown-temperature': KeyInfo(default=95),
                 'speed': KeyInfo(),
                 'tx-flow-control': KeyInfo(default='off'),
